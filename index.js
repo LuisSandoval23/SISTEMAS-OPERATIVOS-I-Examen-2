@@ -1,1 +1,1 @@
-console.log("Hola mundo");
+console.log("App funcionando correctamente");

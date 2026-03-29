@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install
+      - name: Install dependencies
         run: npm install
 
       - name: Deploy
-        run: echo "Deploy realizado"
+        run: echo "Deploy exitoso"
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           API_TOKEN: ${{ secrets.API_TOKEN }}
