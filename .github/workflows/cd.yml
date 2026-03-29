@@ -1,0 +1,22 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install
+        run: npm install
+
+      - name: Deploy
+        run: echo "Deploy realizado"
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
